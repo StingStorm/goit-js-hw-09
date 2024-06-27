@@ -7,8 +7,8 @@ const formData = {
 restoreFormFields();
 
 feedbackForm.addEventListener('input', event => {
-  formData.email = feedbackForm.elements.email.value;
-  formData.message = feedbackForm.elements.message.value;
+  formData.email = feedbackForm.elements.email.value.trim();
+  formData.message = feedbackForm.elements.message.value.trim();
 
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 });
